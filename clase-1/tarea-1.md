@@ -13,7 +13,7 @@ Los servidores alojan aplicaciones y un back-end es una aplicación que puede br
 * OPTIONS es utilizado para describir las opciones de comunicación para el recurso de destino.
 
 ## www.google.com. es la direccion ip? donde esta el puerto?
-www.google.com es el dominio y no es necesario poner el puerto, por que por defecto las aplicaciones front arrancan con el puesto 80 y no es necesario ponerlo.
+DNS www.google.com es el dominio y no es necesario poner el puerto, por que por defecto las aplicaciones front arrancan con el puesto 80 y no es necesario ponerlo.
 
 ## puertos comunes
 
