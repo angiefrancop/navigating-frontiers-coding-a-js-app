@@ -35,8 +35,12 @@ node server.js
 ```
 La aplicación se va a romper (revisen en el navegador en la pestaña `Network` de las herramientas de desarrollador)
 ¿Qué tuvieron que cambiar para volver a ver la lista de estudiantes?
+la llamada del enpoint
+xhr.open('GET', 'http://localhost:3000/estudiantes');
 ¿Porqué antes no teníamos que especificar el puerto en el navegador para ver la lista?
+Por que para levantar el front el endiende que el pueto por defecto es el 80
 
 ## Sigamos dañando cosas!
 Cambien el nombre del archivo `index.html` en la carpeta `front-end` por `estudiantes.html`
 ¿Cómo hay que poner ahora la URL en el navegador para ver nuestra página?
+http://localhost:3000/estudiantes.html
