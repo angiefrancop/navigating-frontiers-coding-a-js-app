@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "bb719322-1523-4f31-a51f-24243b505473",
+		"name": "Tarea3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1013012"
+	},
+	"item": [
+		{
+			"name": "Get market-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/market-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"market-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/add-item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Carne\",\n    \"count\": 1,\n    \"price\": 10000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/add-item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"add-item"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
