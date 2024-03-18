@@ -1,5 +1,5 @@
-import psList from "ps-list";
-import { writeTxtFile } from "./utils.js";
+import psList from 'ps-list';
+import { writeTxtFile } from './utils.js';
 
 const getMaxUsageProcess = async () => {
   const processList = await psList();
@@ -8,7 +8,7 @@ const getMaxUsageProcess = async () => {
       return {
         pid: process.pid,
         name: process.name,
-        cpu: process.cpu,
+        cpu: process.cpu
       };
     })
     .sort((processA, processB) => {
@@ -18,6 +18,4 @@ const getMaxUsageProcess = async () => {
   return formattedAndSortedProccessList[0];
 };
 
-getMaxUsageProcess().then((maxUsageProcess) =>
-  writeTxtFile("maxUsageInfo.txt", maxUsageProcess)
-);
+getMaxUsageProcess().then((maxUsageProcess) => writeTxtFile('maxUsageInfo.txt', maxUsageProcess));

@@ -1,5 +1,5 @@
-import os from "os";
-import { readTxtFile, writeTxtFile } from "./utils.js";
+import os from 'os';
+import { readTxtFile, writeTxtFile } from './utils.js';
 
 const getSystemInfo = () => {
   const userInfo = os.userInfo();
@@ -11,15 +11,15 @@ const getSystemInfo = () => {
     userName: userInfo.username,
     totalRAM: `${(totalMemory / 1024 ** 3).toFixed(2)} GB`,
     freeRAM: `${(freeMemory / 1024 ** 3).toFixed(2)} GB`,
-    cpuModel: cpuInfo[0].model,
+    cpuModel: cpuInfo[0].model
   };
 };
 
 const systemInfo = getSystemInfo();
 
-writeTxtFile("systemInfo.txt", systemInfo);
+writeTxtFile('systemInfo.txt', systemInfo);
 
-readTxtFile("systemInfo.txt", (data) => {
+readTxtFile('systemInfo.txt', (data) => {
   const formattedData = JSON.parse(data);
   console.log(`Usuario: ${formattedData.userName}`);
   console.log(`RAM Total: ${formattedData.totalRAM}`);
