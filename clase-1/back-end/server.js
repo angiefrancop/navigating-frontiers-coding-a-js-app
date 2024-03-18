@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const puerto = 3000;
+const puerto = process.env.PORT;
 
 const estudiantes = [
   { id: 1, nombre: 'Hernan', apellido: 'Metaute' },

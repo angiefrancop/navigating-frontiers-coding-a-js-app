@@ -4,7 +4,7 @@
 function cargarEstudiantes() {
   const listaEstudiantes = document.getElementById('estudiantes');
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', 'http://localhost:3000/estudiantes');
+  xhr.open('GET', `http://localhost:${process.env.PORT}/estudiantes`);
   xhr.send();
   xhr.responseType = 'json';
   xhr.onload = () => {
