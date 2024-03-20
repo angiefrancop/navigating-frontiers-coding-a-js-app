@@ -30,7 +30,7 @@ const server = http.createServer((req, res) => {
     reqBody += chunk;
   });
   req.on('end', () => {
-    if (req.method === 'GET' && req.url === '/market-list') {
+    if (req.method === 'GET' && req.url === '/market/list-item') {
       const resBody = marketList;
       res.writeHead(200, {
         'Content-Type': 'application/json'
@@ -38,7 +38,7 @@ const server = http.createServer((req, res) => {
       res.end(JSON.stringify(resBody));
     }
 
-    if (req.method === 'POST' && req.url === '/add-item') {
+    if (req.method === 'POST' && req.url === '/market/add-item') {
       const item = JSON.parse(reqBody);
       if (validateItem(item)) {
         res.writeHead(409, {

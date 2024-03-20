@@ -26,12 +26,12 @@ let marketList = [
 
 app.use(express.json());
 
-app.get('/market-list', (req, res) => {
+app.get('/market/list-items', (req, res) => {
   const resBody = marketList;
   res.status(200).json(resBody);
 });
 
-app.post('/add-item', (req, res) => {
+app.post('/market/add-item', (req, res) => {
   const item = req.body;
   if (validateItem(item)) {
     res.status(409).json('The item already exists in the market list');
